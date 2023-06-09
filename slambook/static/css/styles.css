@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&family=Signika:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: .3px;
+  }
+
+  body {
+    background: linear-gradient(to right, rgba(240, 120, 40, 0.75), rgb(215, 55, 55, 0.75), rgb(220, 50, 120, 0.75), rgb(180, 70, 150, 0.75));
+  }
+
+  input, textarea, .form-control, td {
+    font-family: 'Concert One', cursive;
+    color: rgb(0, 0, 0);
+  }
+
+  .form-label, .col-form-label {
+    font-weight: 400;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.6em;
+    background-color: rgb(110, 110, 110);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgb(190, 190, 190);
+  }
+
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }

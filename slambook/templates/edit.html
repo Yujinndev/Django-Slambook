@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/css/styles.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Django Crud, LAYSA</title>
+</head>
+<body> 
+  <section class="h-75 gradient-form">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-12 p-4">
+                <div class="card-body p-md-2 mx-md-4">
+
+                  <div class="text-center container p-0 d-flex flex-cou align-items-center mb-0">
+                    <h6 class="text-success mt-2 me-1">Django Crud</h6> \\ <strong class="card-text ms-1">Slambook</strong>
+                  </div>
+
+                  <form class="row d-flex justify-content-center align-items-center" method="POST" method="POST" action="/update/{{ person.id }}">
+                    {% csrf_token %}
+                    <div class="card-body">
+                      <h1 class="card-title fw-semibold">UPDATE DETAILS</h1>
+
+                      <hr>
+                      <div class="row">
+                        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="name" value="{{ person.name }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" name="email" value="{{ person.email }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="firstname" class="col-sm-2 col-form-label">Age:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="age" value="{{ person.age }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="gender" class="col-sm-2 col-form-label">Gender:</label>
+                        <div class="col-sm-10">
+                          <input type="tel" class="form-control" name="gender" value="{{ person.gender }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="phoneNumber" class="col-sm-2 col-form-label">Phone Number:</label>
+                        <div class="col-sm-10">
+                          <input type="tel" class="form-control" name="phoneNumber" value="{{ person.phoneNumber }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="course" class="col-sm-2 col-form-label">Course:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="course" value="{{ person.course }}" />
+                        </div>
+                      </div>
+
+
+                      <hr>
+                      <div class="row">
+                        <label for="address" class="col-sm-2 col-form-label">Address:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="address" value="{{ person.address }}" />
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <label for="motto" class="col-sm-2 col-form-label">Motto:</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" name="motto">{{ person.motto }}</textarea>
+                        </div>
+                      </div>
+                      
+                      <div class="text-center pt-1 pb-1 d-flex justify-content-between">
+                        <a class="btn btn-outline-primary" href="/"><i class="bi bi-caret-left"></i> Go back</a>
+                        <button class="btn btn-primary w-25" type="submit" id="submit-btn">Update</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
